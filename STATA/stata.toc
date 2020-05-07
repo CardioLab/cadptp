@@ -1,8 +1,0 @@
-   v 3
-        d Materials by Samuel E Schmidt
-
-        d Here are some useful things I have written
-
-        p cadptp A program to estimate  Clinical likelihood of coronary artery disease
-
-       
