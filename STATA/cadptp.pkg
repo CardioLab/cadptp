@@ -1,11 +1,6 @@
  v 3
         d cadptp.  Clinical likelihood of coronary artery disease 
         d Program by Samuel E Schmidt.
-        d Other lines describing the package could appear here.
-
-        * I can also insert comments; these will not be displayed.
-        * f lines name the files that comprise your package:
-
         f cadptp.ado
         f cadptp.sthlp
        
