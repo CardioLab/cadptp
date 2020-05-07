@@ -1,9 +1,5 @@
- v 3
-		d cadptp.  Clinical likelihood of coronary artery disease 
+v 3
+		d Programs for estimation of Clinical likelihood of coronary artery disease 
         d Program by Samuel E Schmidt.
-        d Other lines describing the package could appear here.
-
- 
-
-        p xyregression cadptp.pkg 
+        p cadptp cadptp.pkg 
        
