@@ -1,6 +1,5 @@
    v 3
-        d Materials by Samuel E Schmidt
-
-        p cadptp A program to estimate  Clinical likelihood of coronary artery disease
+   d Materials by Samuel E Schmidt
+   p cadptp A program to estimate Clinical likelihood of coronary artery disease
 
        
