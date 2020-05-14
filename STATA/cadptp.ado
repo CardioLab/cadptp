@@ -14,6 +14,8 @@ version 13.0
 	    markout `touse' `male' `symp' `age'
 	
 	
+
+	
 	
 /* drop variables if option "replace" is chosen */
 		 
@@ -30,6 +32,8 @@ if "`replace'" != "" {
 				   drop ptp_basic_grp`suffix'
 		   }
     }
+	
+	
 		   
 	if "`nb_rf'" !="" { 
 	
@@ -72,11 +76,11 @@ if "`replace'" != "" {
 * Estimate PTP values
 quietly {
 
-	tempvar symp_non_anglinal  symp_typical nb_rf_3 cacs_1_9 cacs_10_99 cacs_100_399 cacs_400_999 cacs_1000 riskgrp5
+	tempvar symp_non_anglinal  symp_typical nb_rf_3 cacs_1_9 cacs_10_99 cacs_100_399 cacs_400_999 cacs_1000  
 
-	label define `riskgrp5' 0"Very low risk (<=5%)" 1 "Low risk (5- <=15%)" 2 "Low intermed (15- <=50%)" 3 "High intermed (50- <=85%)" 4 "High (>85%)" 
+	label define cadptp_riskgrp 0 "Very low risk (<=5%)" 1 "Low risk (5- <=15%)" 2 "Low intermed (15- <=50%)" 3 "High intermed (50- <=85%)" 4 "High (>85%)"  , replace
 
-	* One hot encoding symptoms
+		* One hot encoding symptoms
 	gen `symp_non_anglinal' = (`symp'==0)
 	gen `symp_typical' = (`symp'==2)
 
@@ -94,7 +98,7 @@ quietly {
 		replace ptp_basic_grp`suffix' =4 if ptp_basic >0.85 & ptp_basic <=1.00
 
 		label variable ptp_basic_grp`suffix' "Pre-test probability groups basic"
-		label values ptp_basic_grp`suffix' `riskgrp5'
+		label values ptp_basic_grp`suffix' cadptp_riskgrp
 	}
 	
 	* In case of number of risk factores is given estimate PTP_RF
@@ -116,8 +120,8 @@ quietly {
 			replace ptp_rf_grp`suffix' =3 if ptp_rf >0.50 & ptp_rf<=0.85
 			replace ptp_rf_grp`suffix' =4 if ptp_rf >0.85 & ptp_rf <=1.00
 
-			label variable ptp_rf_grp`suffix' "Pre-test probability groups basic"
-			label values ptp_rf_grp`suffix' `riskgrp5'
+			label variable ptp_rf_grp`suffix' "Pre-test probability groups risk factor weighted"
+			label values ptp_rf_grp`suffix'  cadptp_riskgrp
 		}
 	}
 	 
@@ -145,10 +149,11 @@ quietly {
 			replace ptp_cacs_grp`suffix' =4 if ptp_cacs >0.85 & ptp_cacs <=1.00
 
 			label variable ptp_cacs_grp`suffix' "Pre-test probability groups basic"
-			label values ptp_cacs_grp`suffix' `riskgrp5'	
+			label values ptp_cacs_grp`suffix' cadptp_riskgrp	
 			
 		}
 	}
 
  }
+  
 end

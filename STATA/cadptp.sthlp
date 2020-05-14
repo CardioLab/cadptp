@@ -127,7 +127,7 @@ Schmidt SE & Winther S (2020). cadptp: Stata module for calculating Clinical lik
 {p 4 8 2}	Samuel Emil Schmidt, Aalborg Univerisity, DK {p_end}
 {p 4 8 2}{browse "mailto:sschmidt@hst.aau.dk":sschmidt@hst.aau.dk}{p_end}
 {p 4 8 2}	Simon Winther, Hospital Unit West, DK {p_end}
-{p 4 8 2}{browse "mailto:sw@dadlnet.dk":sw@dadlnet.dkg}{p_end}
+{p 4 8 2}{browse "mailto:sw@dadlnet.dk":sw@dadlnet.dk}{p_end}
 
 
 
