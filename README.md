@@ -7,7 +7,7 @@ Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is esti
 
 # citation
 
-The cadptp toolbox is a free contribution to the research community, like a paper. Please cite it as such: {p_end}
+The cadptp toolbox is a free contribution to the research community, like a paper. Please cite it as such: 
 
 Schmidt SE & Winther S (2020). cadptp: Statistical module for calculating Clinical likelihood of coronary artery disease 
 
