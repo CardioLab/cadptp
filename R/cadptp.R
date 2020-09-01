@@ -1,14 +1,32 @@
 #' The cadptp calculates pre-test probability (PTP) of having obstructive coronary artery disease in patients with chronic coronary syndrome 
 #' 
-#' @param sex A number.
-#' @param age 
-#' @param symp_gr3 
-#' @param nb_rf 
-#' @param cacs 
+#' 
+#' The cadptp command calculates pre-test probability (PTP) of having obstructive coronary artery disease in patients with chronic
+#' coronary syndrome (symptoms suggestive of obstructive coronary artery disease) without previously documented cor tery disease.
+#' The model is based on data from >40,000 patients and validated in >15.000 (ref).  When only age, gender and symptoms are used as
+#' input the basic PTP (ptp_basic) is calcualted.  If the number of risk factors are given the risk factor weighted clinical
+#' likelihood of CAD (ptp_rf) is also calculated.  Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is
+#' estimated.
+#' 
+#' 
+#' @param sex gender, where male = 1 and female = 0
+#' @param age  Age in years
+#' @param symp_gr   Symptoms, where Non-typical angina=0, Atypical angina or dyspnoea=1 and Typical angina =2
+#' @param nb_rf  Number of risk factors (0-5) (Riskfactors: Family history of early CAD, Smoking, Dyslipidaemia, Hypertension or Diabetes)
+#' @param cacs  Coronary artery calcium score determined by the Agatston method
 #'
 #'
 #' @return ptp 
-#' @examples
+#' @examples 
+#' Download Synthetic dataset of patients with chronic coronary syndrome
+#'  download.file('https://vbn.aau.dk/files/331937080/synthetic_cadptp.dta','synthetic_cadptp.dta')
+#'  
+#' Read STATA file: 
+#' library(haven)
+#' heart <- read_dta("synthetic_cadptp.dta")
+#' 
+#' Estimae PTP:
+#' cadptp(heart[,'sex'],heart[,'age'],heart[,'symp_gr3'],heart[,'nb_rf_5'],heart[,'calciumscoreagatston']) 
 
 
 cadptp <- function(sex, age , symp_gr3, nb_rf, cacs) {
