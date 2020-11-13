@@ -6,13 +6,10 @@ When only age, gender and symptoms are used as input the basic PTP (ptp_basic) i
 Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is estimated.
 
 # Instaltion in STATA
-For in STATA installtion write:
+To install CAP-PTP from STATA write the full line below in STATA:
 
 *net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA)*
 
-for updates write:
-
-*net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA)*
 
 # citation
 
