@@ -15,9 +15,9 @@ To install CAP-PTP from STATA write the full line below in STATA:
 
 The CAD-PTP toolbox is a free contribution to the research community, like a paper. Please cite it as such: 
 
-Schmidt SE & Winther S (2020). cadptp: Statistical module for calculating Clinical likelihood of coronary artery disease 
+Schmidt SE & Winther S (2020). cadptp: Statistical module for calculating Clinical likelihood of coronary artery disease. https://github.com/CardioLab/cadptp
 
-And please cite it the orginal reseasch paper:
+And please also cite the orginal reseasch paper:
 
 Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, In press
 
