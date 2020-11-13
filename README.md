@@ -8,18 +8,18 @@ Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is esti
 # Instaltion in STATA
 To install CAP-PTP from STATA write the full line below in STATA:
 
-*net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA)*
+**net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA)**
 
 
 # Citation
 
 The CAD-PTP toolbox is a free contribution to the research community, like a paper. Please cite it as such: 
 
-Schmidt SE & Winther S (2020). cadptp: Statistical module for calculating Clinical likelihood of coronary artery disease. https://github.com/CardioLab/cadptp
+*Schmidt SE & Winther S (2020). cadptp: Statistical module for calculating Clinical likelihood of coronary artery disease. https://github.com/CardioLab/cadptp*
 
 And please also cite the orginal reseasch paper:
 
-Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, In press
+*Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, In press*
 
 
 
