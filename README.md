@@ -5,12 +5,24 @@ The cadptp calculates pre-test probability (PTP) of having obstructive coronary 
 When only age, gender and symptoms are used as input the basic PTP (ptp_basic) is calcualted.  If  the number of risk factors are given the risk factor weighted clinical likelihood of CAD (ptp_rf) is also calculated.  
 Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is estimated.
 
+# Instaltion in STATA
+For in STATA installtion write:
+
+* net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA) *
+
+for updates write:
+
+* net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA) *
 
 # citation
 
-The cadptp toolbox is a free contribution to the research community, like a paper. Please cite it as such: 
+The CAD-PTP toolbox is a free contribution to the research community, like a paper. Please cite it as such: 
 
 Schmidt SE & Winther S (2020). cadptp: Statistical module for calculating Clinical likelihood of coronary artery disease 
+
+And please cite it the orginal reseasch paper:
+
+Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, In press
 
 
 
