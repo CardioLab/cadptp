@@ -1,6 +1,6 @@
 #' The cadptp calculates pre-test probability (PTP) of having obstructive coronary artery disease in patients with chronic coronary syndrome 
 #' 
-#' 
+#' @description
 #' The cadptp command calculates pre-test probability (PTP) of having obstructive coronary artery disease in patients with chronic
 #' coronary syndrome (symptoms suggestive of obstructive coronary artery disease) without previously documented cor tery disease.
 #' The model is based on data from >40,000 patients and validated in >15.000 (ref).  When only age, gender and symptoms are used as
@@ -18,10 +18,9 @@
 #'
 #' @return ptp 
 #' @examples 
-#' Download Synthetic dataset of patients with chronic coronary syndrome
-#'  download.file('https://vbn.aau.dk/files/331937080/synthetic_cadptp.dta','synthetic_cadptp.dta')
-#'  
-#' Read STATA file: 
+#' The current example download a Synthetic dataset of patients with chronic coronary syndrome stored as STATA data and calculates PTPs
+#' 
+#' download.file('https://vbn.aau.dk/files/331937080/synthetic_cadptp.dta','synthetic_cadptp.dta')
 #' library(haven)
 #' heart <- read_dta("synthetic_cadptp.dta")
 #' 
