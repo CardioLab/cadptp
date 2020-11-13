@@ -11,7 +11,7 @@ To install CAP-PTP from STATA write the full line below in STATA:
 *net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA)*
 
 
-# citation
+# Citation
 
 The CAD-PTP toolbox is a free contribution to the research community, like a paper. Please cite it as such: 
 
