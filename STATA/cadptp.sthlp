@@ -59,11 +59,11 @@ cadptp using data in memory
 {title:Description}
 
 {pstd}
-The {cmd:cadptp} command calculates pre-test probability (PTP) of having obstructive coronary artery disease in patients with chronic coronary syndrome (symptoms suggestive of obstructive coronary artery disease) without previously documented coronary artery disease. The model is based on data from >40,000 patients and validated in >15.000 (ref).  
+The {cmd:cadptp} command calculates pre-test probability (PTP) of having obstructive coronary artery disease in patients with chronic coronary syndrome (symptoms suggestive of obstructive coronary artery disease) without previously documented coronary artery disease. The model is based on data from >40,000 patients and validated in >15.000 [1].  
 When only age, gender and symptoms are used as input the basic PTP (ptp_basic) is calcualted.  If  the number of risk factors are given the risk factor weighted clinical likelihood of CAD (ptp_rf) is also calculated.  
 Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is estimated.
 
-   
+ [1] Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, In press 
 
 {title:Examples}
 
@@ -117,15 +117,20 @@ Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is esti
 {p 4 8 2}{cmd:cadptp} is not an official Stata command. It is a free contribution
 to the research community, like a paper. Please cite it as such: {p_end}
 
+{p 4 8 2}{it}
+Schmidt SE & Winther S (2020). cadptp: Stata module for calculating Clinical likelihood of coronary artery disease, github.com/CardioLab/cadptp  {p_end} {reset}
+
+{pstd} And please cite it the orginal reseasch paper: {p_end}
 {p 4 8 2}
-Schmidt SE & Winther S (2020). cadptp: Stata module for calculating Clinical likelihood of coronary artery disease {p_end}
 
+{pstd} {it} Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, In press {p_end}
+{p 4 8 2}
 
-
+   {hline}
 {title:Authors}
 
 {p 4 8 2}	Samuel Emil Schmidt, Aalborg Univerisity, DK {p_end}
-{p 4 8 2}{browse "mailto:sschmidt@hst.aau.dk":sschmidt@hst.aau.dk}{p_end}
+{p 4 8 2} {browse "mailto:sschmidt@hst.aau.dk":sschmidt@hst.aau.dk}{p_end}
 {p 4 8 2}	Simon Winther, Hospital Unit West, DK {p_end}
 {p 4 8 2}{browse "mailto:sw@dadlnet.dk":sw@dadlnet.dk}{p_end}
 
