@@ -8,11 +8,11 @@ Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is esti
 # Instaltion in STATA
 For in STATA installtion write:
 
-* net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA) *
+*net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA)*
 
 for updates write:
 
-* net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA) *
+*net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA)*
 
 # citation
 
