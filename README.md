@@ -19,7 +19,7 @@ The CAD-PTP toolbox is a free contribution to the research community, like a pap
 
 And please also cite the orginal reseasch paper:
 
-*Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, In press*
+*Winther, Simon, et al. "Incorporating coronary calcification into pre-test assessment of the likelihood of coronary artery disease." Journal of the American College of Cardiology 76.21 (2020): 2421-2432.*
 
 
 
