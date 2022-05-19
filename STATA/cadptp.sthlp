@@ -63,7 +63,7 @@ The {cmd:cadptp} command calculates pre-test probability (PTP) of having obstruc
 When only age, gender and symptoms are used as input the basic PTP (ptp_basic) is calcualted.  If  the number of risk factors are given the risk factor weighted clinical likelihood of CAD (ptp_rf) is also calculated.  
 Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is estimated.
 
- [1] Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, In press 
+ [1] Winther et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, Journals of the American College of Cardiology, 76.21 (2020): 2421-2432.
 
 {title:Examples}
 
