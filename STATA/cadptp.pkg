@@ -2,4 +2,5 @@ v 3
 d cadptp.  Clinical likelihood of coronary artery disease 
 d Program by Samuel E Schmidt & Simon Winther
 f cadptp.ado
+f cadptp_cta.ado
 f cadptp.sthlp
