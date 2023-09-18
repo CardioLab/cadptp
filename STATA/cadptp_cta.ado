@@ -87,7 +87,7 @@ quietly {
 	* basic model
 	gen ptp_basic_cta`suffix' =.
 	replace ptp_basic_cta`suffix' = 1./(1+exp(-(-5.3575 + (0.7952*`male') + (0.06168*`age') + (1.2329*`symp_typical') + (-0.58634*`symp_non_anglinal') + (-0.005448*`age'*`symp_typical') )))  if `touse' 
-	label variable ptp_basic_cta`suffix' "Pre-test probability basic"
+	label variable ptp_basic_cta`suffix' "Pre-test probability basic (CTA)"
 	
 	if "`grp'" !="" { 
 		gen ptp_basic_cta_grp`suffix'=.
