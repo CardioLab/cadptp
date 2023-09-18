@@ -97,7 +97,7 @@ quietly {
 		replace ptp_basic_cta_grp`suffix' =3 if ptp_basic_cta >0.50 & ptp_basic_cta<=0.85
 		replace ptp_basic_cta_grp`suffix' =4 if ptp_basic_cta >0.85 & ptp_basic_cta <=1.00
 
-		label variable ptp_basic_cta_grp`suffix' "Pre-test probability groups basic"
+		label variable ptp_basic_cta_grp`suffix' "Pre-test probability groups basic (CTA)"
 		label values ptp_basic_cta_grp`suffix' cadptp_riskgrp
 	}
 	
