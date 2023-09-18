@@ -106,7 +106,7 @@ Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is esti
 
 {synoptset 15 tabbed}{...}
 
-{synopt:{cmd:ptp_basic}} Basic PTP (Note this is not calculated to CTA){p_end}
+{synopt:{cmd:ptp_basic_cta}} Basic PTP {p_end}
 {synopt:{cmd:ptp_rf_cta}} Risk factor weighted clinical likelihood of CAD {p_end}
 {synopt:{cmd:ptp_cacs_cta}} CACS weighted clinical likelihood{p_end}
 

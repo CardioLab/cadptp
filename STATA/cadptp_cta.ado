@@ -21,15 +21,15 @@ version 13.0
 		 
 if "`replace'" != "" { 
 
-	capture confirm variable ptp_basic`suffix'
+	capture confirm variable ptp_basic_cta`suffix'
 	if !_rc {		   
-				   drop ptp_basic`suffix'
+				   drop ptp_basic_cta`suffix'
 		   }
 		   
 	if "`grp'" !="" { 
-	capture confirm variable ptp_basic_grp`suffix'
+	capture confirm variable ptp_basic_cta_grp`suffix'
 	if !_rc {		   
-				   drop ptp_basic_grp`suffix'
+				   drop ptp_basic_cta_grp`suffix'
 		   }
     }
 	
@@ -85,20 +85,20 @@ quietly {
 	gen `symp_typical' = (`symp'==2)
 
 	* basic model
-	gen ptp_basic`suffix' =.
-	replace ptp_basic`suffix' = 1./(1+exp(-(-7.0753 + (1.2308*`male') + (0.0642*`age') + (2.2501*`symp_typical') + (-0.5095*`symp_non_anglinal') + (-0.0191*`age'*`symp_typical') )))  if `touse' 
-	label variable ptp_basic`suffix' "Pre-test probability basic"
+	gen ptp_basic_cta`suffix' =.
+	replace ptp_basic_cta`suffix' = 1./(1+exp(-(-5.3575 + (0.7952*`male') + (0.06168*`age') + (1.2329*`symp_typical') + (-0.58634*`symp_non_anglinal') + (-0.005448*`age'*`symp_typical') )))  if `touse' 
+	label variable ptp_basic_cta`suffix' "Pre-test probability basic"
 	
 	if "`grp'" !="" { 
-		gen ptp_basic_grp`suffix'=.
-		replace ptp_basic_grp`suffix' =0 if ptp_basic >=0.00 & ptp_basic <=.05
-		replace ptp_basic_grp`suffix'=1 if ptp_basic >0.05 & ptp_basic <=0.15
-		replace ptp_basic_grp`suffix' =2 if ptp_basic >0.15 & ptp_basic <=0.50
-		replace ptp_basic_grp`suffix' =3 if ptp_basic >0.50 & ptp_basic<=0.85
-		replace ptp_basic_grp`suffix' =4 if ptp_basic >0.85 & ptp_basic <=1.00
+		gen ptp_basic_cta_grp`suffix'=.
+		replace ptp_basic_cta_grp`suffix' =0 if ptp_basic_cta >=0.00 & ptp_basic_cta <=.05
+		replace ptp_basic_cta_grp`suffix'=1 if ptp_basic_cta >0.05 & ptp_basic_cta <=0.15
+		replace ptp_basic_cta_grp`suffix' =2 if ptp_basic_cta >0.15 & ptp_basic_cta <=0.50
+		replace ptp_basic_cta_grp`suffix' =3 if ptp_basic_cta >0.50 & ptp_basic_cta<=0.85
+		replace ptp_basic_cta_grp`suffix' =4 if ptp_basic_cta >0.85 & ptp_basic_cta <=1.00
 
-		label variable ptp_basic_grp`suffix' "Pre-test probability groups basic"
-		label values ptp_basic_grp`suffix' cadptp_riskgrp
+		label variable ptp_basic_cta_grp`suffix' "Pre-test probability groups basic"
+		label values ptp_basic_cta_grp`suffix' cadptp_riskgrp
 	}
 	
 	* In case of number of risk factores is given estimate PTP_RF
@@ -137,7 +137,7 @@ quietly {
 		
 		
 		gen ptp_cacs_cta`suffix' =.
-		replace ptp_cacs_cta`suffix' = 0.014533 + (ptp_rf * 0.27093)  + (`cacs_1_9'*0.047056) + (`cacs_10_99'* 0.1189) + (`cacs_100_399'*0.34417) + (`cacs_400_999'*0.5881) + (`cacs_1000'*0.73892) + (ptp_rf*`cacs_1_9'*0.054423) + (ptp_rf*`cacs_10_99'* 0.14347) + (ptp_rf*`cacs_100_399'* 0.18439) + (ptp_rf*`cacs_400_999'*0.085774) + (ptp_rf*`cacs_1000'*-0.081776) if `cacs' !=. &  `nb_rf' !=. &  `touse'   
+		replace ptp_cacs_cta`suffix' = 0.014533 + (ptp_rf_cta * 0.27093)  + (`cacs_1_9'*0.047056) + (`cacs_10_99'* 0.1189) + (`cacs_100_399'*0.34417) + (`cacs_400_999'*0.5881) + (`cacs_1000'*0.73892) + (ptp_rf*`cacs_1_9'*0.054423) + (ptp_rf*`cacs_10_99'* 0.14347) + (ptp_rf*`cacs_100_399'* 0.18439) + (ptp_rf*`cacs_400_999'*0.085774) + (ptp_rf*`cacs_1000'*-0.081776) if `cacs' !=. &  `nb_rf' !=. &  `touse'   
 	    label variable ptp_cacs_cta`suffix' "Pre-test probability CACS (CTA)"
 		
 		if "`grp'" !="" { 
