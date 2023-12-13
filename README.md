@@ -5,11 +5,17 @@ The cadptp calculates pre-test probability (PTP) of having obstructive coronary 
 When only age, gender and symptoms are used as input the basic PTP (ptp_basic) is calcualted.  If  the number of risk factors are given the risk factor weighted clinical likelihood of CAD (ptp_rf) is also calculated.  
 Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is estimated.
 
+# Update 2023: Estimation of Clinical likelihood of CCTA-defined coronary artery disease
+Where the cadptp function estimates the Clinical likelihood of CAD defined via invasive coronary angiography, the new cadptp_cta function estimates the Clinical likelihood of coronary artery disease defined from Coronary computed tomography angiography.
+
+
 # Instaltion in STATA
 To install CAP-PTP from STATA write the full line below in STATA:
 
 **net install cadptp, from(https://github.com/CardioLab/cadptp/raw/master/STATA)**
 
+**help cadptp **  Clinical likelihood of coronary artery disease defined by invasive coronary angiography.
+**help cadptp_cta ** for Clinical likelihood of coronary artery disease defined by coronary computed tomography angiography.
 
 # Citation
 
