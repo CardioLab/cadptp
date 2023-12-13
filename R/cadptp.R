@@ -2,12 +2,12 @@
 #' 
 #' @description
 #' The cadptp command calculates pre-test probability (PTP) of having obstructive coronary artery disease in patients with chronic
-#' coronary syndrome (symptoms suggestive of obstructive coronary artery disease) without previously documented cor tery disease.
+#' coronary syndrome (symptoms suggestive of obstructive coronary artery disease) without previously documented coronary artery disease.
 #' The model is based on data from >40,000 patients and validated in >15.000 (ref).  When only age, gender and symptoms are used as
 #' input the basic PTP (ptp_basic) is calcualted.  If the number of risk factors are given the risk factor weighted clinical
 #' likelihood of CAD (ptp_rf) is also calculated.  Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is
 #' estimated.
-#' 
+#'  See  Winther, S, Schmidt, S, Mayrhofer, T. et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease. J Am Coll Cardiol. 2020 Nov, 76 (21) 2421–2432.https://doi.org/10.1016/j.jacc.2020.09.585
 #' 
 #' @param sex gender, where male = 1 and female = 0
 #' @param age  Age in years
@@ -72,6 +72,20 @@ cadptp <- function(sex, age , symp_gr3, nb_rf, cacs) {
    }  
  
   ptp <- data.frame(ptp, row.names = NULL)
+  
+  if (ncol(ptp)==1)
+    
+    colnames( ptp) <- c('ptp_basic_cta') 
+  
+  else if (ncol(ptp)==2)
+    
+    colnames( ptp) <- c('ptp_basic_cta','ptp_rf_cta') 
+  
+  else if (ncol(ptp)==3)
+    
+    colnames( ptp) <- c('ptp_basic_cta','ptp_rf_cta','ptp_cacs_cta') 
+  
+  end
   
   return(ptp)
   
