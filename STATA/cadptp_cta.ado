@@ -137,7 +137,7 @@ quietly {
 		
 		
 		gen ptp_cacs_cta`suffix' =.
-		replace ptp_cacs_cta`suffix' = 0.014533 + (ptp_rf_cta * 0.27093)  + (`cacs_1_9'*0.047056) + (`cacs_10_99'* 0.1189) + (`cacs_100_399'*0.34417) + (`cacs_400_999'*0.5881) + (`cacs_1000'*0.73892) + (ptp_rf*`cacs_1_9'*0.054423) + (ptp_rf*`cacs_10_99'* 0.14347) + (ptp_rf*`cacs_100_399'* 0.18439) + (ptp_rf*`cacs_400_999'*0.085774) + (ptp_rf*`cacs_1000'*-0.081776) if `cacs' !=. &  `nb_rf' !=. &  `touse'   
+		replace ptp_cacs_cta`suffix' = 0.014533 + (ptp_rf * 0.27093)  + (`cacs_1_9'*0.047056) + (`cacs_10_99'* 0.1189) + (`cacs_100_399'*0.34417) + (`cacs_400_999'*0.5881) + (`cacs_1000'*0.73892) + (ptp_rf*`cacs_1_9'*0.054423) + (ptp_rf*`cacs_10_99'* 0.14347) + (ptp_rf*`cacs_100_399'* 0.18439) + (ptp_rf*`cacs_400_999'*0.085774) + (ptp_rf*`cacs_1000'*-0.081776) if `cacs' !=. &  `nb_rf' !=. &  `touse'   
 	    label variable ptp_cacs_cta`suffix' "Pre-test probability CACS (CTA)"
 		
 		if "`grp'" !="" { 
