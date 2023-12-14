@@ -113,7 +113,7 @@ quietly {
 		label variable ptp_rf_cta`suffix' "Pre-test probability risk factor weighted (CTA)"
 	
 		if "`grp'" !="" { 	
-			gen ptp_rf_grp`suffix'=.
+			gen ptp_rf_cta_grp`suffix'=.
 			replace ptp_rf_cta_grp`suffix' =0 if ptp_rf_cta >=0.00 & ptp_rf_cta <=.05
 			replace ptp_rf_cta_grp`suffix'=1 if ptp_rf_cta >0.05 & ptp_rf_cta <=0.15
 			replace ptp_rf_cta_grp`suffix' =2 if ptp_rf_cta >0.15 & ptp_rf_cta <=0.50
@@ -121,7 +121,7 @@ quietly {
 			replace ptp_rf_cta_grp`suffix' =4 if ptp_rf_cta >0.85 & ptp_rf_cta <=1.00
 
 			label variable ptp_rf_cta_grp`suffix' "Pre-test probability groups risk factor weighted (CTA)"
-			label values ptp_rf_grp`suffix'  cadptp_riskgrp
+			label values ptp_rf_cta_grp`suffix'  cadptp_riskgrp
 		}
 	}
 	 
@@ -137,7 +137,7 @@ quietly {
 		
 		
 		gen ptp_cacs_cta`suffix' =.
-		replace ptp_cacs_cta`suffix' = 0.014533 + (ptp_rf * 0.27093)  + (`cacs_1_9'*0.047056) + (`cacs_10_99'* 0.1189) + (`cacs_100_399'*0.34417) + (`cacs_400_999'*0.5881) + (`cacs_1000'*0.73892) + (ptp_rf*`cacs_1_9'*0.054423) + (ptp_rf*`cacs_10_99'* 0.14347) + (ptp_rf*`cacs_100_399'* 0.18439) + (ptp_rf*`cacs_400_999'*0.085774) + (ptp_rf*`cacs_1000'*-0.081776) if `cacs' !=. &  `nb_rf' !=. &  `touse'   
+		replace ptp_cacs_cta`suffix' = 0.014533 + (ptp_rf_cta * 0.27093)  + (`cacs_1_9'*0.047056) + (`cacs_10_99'* 0.1189) + (`cacs_100_399'*0.34417) + (`cacs_400_999'*0.5881) + (`cacs_1000'*0.73892) + (ptp_rf_cta*`cacs_1_9'*0.054423) + (ptp_rf_cta*`cacs_10_99'* 0.14347) + (ptp_rf_cta*`cacs_100_399'* 0.18439) + (ptp_rf_cta*`cacs_400_999'*0.085774) + (ptp_rf_cta*`cacs_1000'*-0.081776) if `cacs' !=. &  `nb_rf' !=. &  `touse'   
 	    label variable ptp_cacs_cta`suffix' "Pre-test probability CACS (CTA)"
 		
 		if "`grp'" !="" { 
