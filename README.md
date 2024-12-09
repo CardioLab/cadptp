@@ -1,6 +1,6 @@
 # CAD-PTP: Estimation of Clinical likelihood of coronary artery disease
 
-The cadptp calculates pre-test probability (PTP) of having obstructive coronary artery disease in patients with chronic coronary syndrome (symptoms suggestive of obstructive coronary artery disease) without previously documented coronary artery disease. The model is based on data from >40,000 patients and validated in >15.000, see the publication by Winther et al. "Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease" in Journals of the American College of Cardiology. 
+"cadptp" calculates the pre-test probability (PTP) of having obstructive coronary artery disease (CAD) diagnosed via invasive coronary angiography in patients with chronic coronary syndrome (i.e., symptoms suggestive of obstructive coronary artery disease) without previously documented CAD. The model is based on data from over 40,000 patients and validated in more than 15,000 patients, as detailed in the publication by Winther et al., "Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of Coronary Artery Disease," published in the Journal of the American College of Cardiology.
 
 When only age, gender and symptoms are used as input the basic PTP (ptp_basic) is calculated.  If  the number of risk factors are given the risk factor-weighted clinical likelihood of CAD (ptp_rf) is also calculated.  
 Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is estimated.
@@ -48,7 +48,7 @@ https://www.sciencedirect.com/science/article/pii/S1936878X24001852?via%3Dihub
 DOI: 10.1093/eurheartj/ehae742
 https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehae742/7841880
 
-**The paper related to the CTA calibrated model is under review**
+**Note the paper related to the CTA calibrated model is under review**
 
 
 # Authors
