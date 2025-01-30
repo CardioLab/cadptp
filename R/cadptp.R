@@ -12,7 +12,7 @@
 #' @param sex gender, where male = 1 and female = 0
 #' @param age  Age in years
 #' @param symp_gr   Symptoms, where Non-typical angina=0, Atypical angina or dyspnoea=1 and Typical angina =2
-#' @param nb_rf  Number of risk factors (0-5) (Riskfactors: Family history of early CAD, Smoking, Dyslipidaemia, Hypertension or Diabetes)
+#' @param nb_rf  Number of risk factors (0-5) (Risk factors: Family history of early CAD, Smoking, Dyslipidemia, Hypertension or Diabetes)
 #' @param cacs  Coronary artery calcium score determined by the Agatston method
 #'
 #'
@@ -75,15 +75,15 @@ cadptp <- function(sex, age , symp_gr3, nb_rf, cacs) {
   
   if (ncol(ptp)==1)
     
-    colnames( ptp) <- c('ptp_basic_cta') 
+    colnames( ptp) <- c('ptp_basic') 
   
   else if (ncol(ptp)==2)
     
-    colnames( ptp) <- c('ptp_basic_cta','ptp_rf_cta') 
+    colnames( ptp) <- c('ptp_basic','ptp_rf') 
   
   else if (ncol(ptp)==3)
     
-    colnames( ptp) <- c('ptp_basic_cta','ptp_rf_cta','ptp_cacs_cta') 
+    colnames( ptp) <- c('ptp_basic','ptp_rf','ptp_cacs') 
   
   end
   
