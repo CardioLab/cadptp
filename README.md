@@ -6,7 +6,7 @@ When only age, gender and symptoms are used as input the basic PTP (ptp_basic) i
 Finally, if CACS is given a CACS weighted clinical likelihood (ptp_cacs) is estimated.
 
 ## Update 2023: Estimation of Clinical likelihood of CCTA-defined coronary artery disease
-Where the "cadptp" function estimates the Clinical likelihood of CAD defined via invasive coronary angiography, the new "cadptp_cta" function estimates the Clinical likelihood of coronary artery disease defined from CCTA. This model was developed to adjust for the higher prevalence of CAD by CCTA compared to invasive angiography.  Paper under review. 
+Where the "cadptp" function estimates the Clinical likelihood of CAD defined via invasive coronary angiography, the new "cadptp_cta" function estimates the Clinical likelihood of coronary artery disease defined from CCTA. This model was developed to adjust for the higher prevalence of CAD by CCTA compared to invasive angiography.  See *L D Rasmussen et al, Clinical likelihood models calibrated against observed obstructive coronary artery disease by computed tomography angiography, European Heart Journal - Cardiovascular Imaging, 2024, https://doi.org/10.1093/ehjci/jeae142.031* 
 
 
 ## Instaltion in STATA
@@ -30,6 +30,7 @@ And please also cite the original research paper relate to the invasive coronary
 
 *Winther, Simon, et al. "Incorporating coronary calcification into pre-test assessment of the likelihood of coronary artery disease." Journal of the American College of Cardiology 76.21 (2020): 2421-2432.*
 https://www.sciencedirect.com/science/article/abs/pii/S0735109720373678
+
 
 Other publications:  
 *Coronary Calcium Scoring Improves Risk Prediction in Patients With Suspected Obstructive Coronary Artery Disease S. Winther, S. E. Schmidt, B. Foldyna, T. Mayrhofer, L. D. Rasmussen, J. N. Dahl, et al. J Am Coll Cardiol 2022 Vol. 80 Issue 21 Pages 1965-1977*
